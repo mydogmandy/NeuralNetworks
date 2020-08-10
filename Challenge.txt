@@ -1,0 +1,28 @@
+Alphabet Soup Challenge:
+
+How many neurons and layers did you select for your neural network model? 
+In my initial training consisited of 2 hidden layers, one containing 15, and one containing 8 as a good starting point, following the examples of the lessons in the module.
+ 
+Were you able to achieve the target model performance? 
+No, I was not able to achieve the target performance of 78% accuracy.  The best I was able to achieve was 71.3%
+
+What steps did you take to try and increase model performance?
+I initially dropped the "NAMES" column, as it was basically a duplicate of the EIN column, and not a feature that would contribute to an accurate prediction.  I also experimented with dropping the "INCOME_AMT" & "SPECIAL_CONSIDERATIONS" as well, but actually achieved worse results, so I put them back.  
+First results:
+268/268 - 0s - loss: 0.5803 - accuracy: 0.7064
+Loss: 0.5803092122077942, Accuracy: 0.7063556909561157
+
+I decided to increase my hidden layer amounts and add another hidden layer for amounts of 30-16-8, and slightly increased the accuracy:
+268/268 - 0s - loss: 0.5806 - accuracy: 0.7131
+Loss: 0.5805785655975342, Accuracy: 0.7131195068359375
+
+For the third try, I changed the activation from RELU to TANH, but kept all else the same, and the accuracy actually decreased:
+268/268 - 0s - loss: 0.5769 - accuracy: 0.7088
+Loss: 0.5768993496894836, Accuracy: 0.7088046669960022
+
+For the fourth try, I kept the layers the same, but increased the nodes to 60-32-16 and increasde the epochs from 100 to 500:
+268/268 - 0s - loss: 0.5909 - accuracy: 0.7139
+Loss: 0.5909494161605835, Accuracy: 0.7139358520507812
+
+If you were to implement a different model to solve this classification problem, which would you choose? 
+I would choose the Random Forest due to the quickness of calculations, so it is easier to make adjustments without having to wait so long.
